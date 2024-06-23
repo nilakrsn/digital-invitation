@@ -1,0 +1,425 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('../src/assets/font/Georgia/Georgia.ttf');
+}
+
+
+@font-face {
+  font-family: 'Butler Ultra';
+  src: url('../src/assets/font/Butler/Butler_Ultra_Light.otf');
+}
+
+@font-face {
+  font-family: 'Butler regular';
+  src: url('../src/assets/font/Butler/Butler_Regular.otf');
+}
+
+
+@font-face {
+  font-family: 'Snell Round Hand';
+  src: url('../src/assets/font/SnellRoundHand/SnellRoundhand.ttc');
+}
+
+.georgia {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  
+}
+
+.butler-regular{
+  font-family: 'Butler regular';
+
+}
+.butler {
+  font-family: 'Butler Ultra';
+}
+
+.snellRoundHand {
+  font-family: 'Snell Round Hand';
+}
+
+.crop {
+  margin: 0;
+  width: 720px; 
+  height: 80px; 
+  overflow: hidden; 
+}
+
+.crop-img {
+  margin: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+
+.crop-maps {
+  margin: 0;
+  width: 600px; 
+  height: 80px; 
+  overflow: hidden; 
+}
+
+.img-rounded {
+  margin: 0;
+  width: 620px; 
+  height: 440px; 
+  overflow: hidden; 
+}
+
+.crop-img-rounded {
+  margin: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.right-flower {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 80%;
+  background-size: cover;
+  background-position: right;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150848/invaite/assets_2.png');
+}
+.left-flower {
+  position: absolute;
+  top: 73%;
+  left: 0;
+  width: 55%;
+  height: 110%;
+  background-size: cover;
+  background-position: left;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150876/invaite/assets_1.png'); 
+}
+.bottom-right-flower {
+  position: absolute;
+  top: 55%;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: right;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150872/invaite/assets_5.png');
+}
+
+.bottom-left-flower {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 50%;
+  height: 115%;
+  background-size: cover;
+  background-position: left;
+  z-index: -10;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150867/invaite/assets_4.png'); 
+}
+
+
+
+
+.center-bg {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 185%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150849/invaite/assets_6.png');
+}
+
+.text-content{
+  transform: translate(0, 15%);
+}
+
+.maps-rounded {
+  margin: 0;
+  width: 30%; 
+  height: 30%; 
+  overflow: hidden; 
+}
+
+.crop-maps-rounded {
+  margin: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.crop-live {
+  margin: 0;
+  width: 650px; 
+  height: 90px; 
+  overflow: hidden; 
+}
+
+.maps-right-flower {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: right;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150855/invaite/assets_7.png'); 
+}
+.maps-left-flower {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: left;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150859/invaite/assets_8.png');
+}
+
+.select{
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23808080%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+}
+
+.mb-3 input::placeholder, textarea::placeholder {
+  color: #000; 
+}
+
+.center-rounded {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 180%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150843/invaite/assets_9.png'); 
+}
+
+.text-gift{
+  transform: translate(0, 20%);
+}
+
+.gift-flower {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background-size: cover;
+  background-position: left;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150868/invaite/assets_10.png'); 
+}
+
+.prewedding {
+  margin: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150841/invaite/prewedding.jpg'); 
+}
+
+.footer-rounded {
+  margin: 0;
+  width: 350px; 
+  height: 250px; 
+  overflow: hidden; 
+}
+
+.crop-footer-rounded {
+  margin: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.footer-left-flower {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background-size: cover;
+  background-position: left;
+  z-index: -1;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150850/invaite/assets_12.png');
+}
+
+.footer-right-flower {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background-size: cover;
+  background-position: right;
+  background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150850/invaite/assets_12.png');
+  transform: scaleX(-1);
+}
+
+.insta-rounded {
+  margin: 0;
+  width: 160px; 
+  height: px; 
+  overflow: hidden; 
+}
+
+.crop-insta-rounded {
+  margin: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+@media (max-width: 768px) {
+  .crop {
+    width: 550px; 
+    height: 100px; 
+  }
+  .crop-maps {
+    margin: 0;
+    width: 450px; 
+    height: 60px; 
+  }
+  .crop-img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+  }
+  .crop-live {
+    margin: 0;
+    width: 550px; 
+    height: 90px; 
+    overflow: hidden; 
+  }
+  
+  .left-flower {
+    top: 85%;
+    width: 35%; 
+    height: 35%;
+  }
+  .right-flower {
+    width: 50%; 
+    height: 25%;
+    
+  }
+  .img-rounded {
+    width: 200px; 
+    height: 120px; 
+    z-index: 10;
+     
+  }
+  .center-bg {
+    top: 90%;
+    height: 180%;  
+    background-size: cover;  
+  }
+  .bottom-right-flower{
+    top: 80%;
+    width: 150px; 
+    height: 200px; 
+    z-index: -1;
+  }
+  .bottom-left-flower{
+    top: 135%;
+    width: 150px; 
+    height: 270px; 
+    z-index: -1;
+  }
+  .maps-rounded{
+    width: 55%; 
+    height: 40%;
+  }
+  .maps-left-flower{
+    top: 40%;
+    width: 250px; 
+    height: 270px; 
+    z-index: -1;
+  }
+  .maps-right-flower{
+    top: 15%;
+    width: 200px; 
+    height: 270px; 
+    z-index: -1;
+  }
+  .center-rounded{
+    top: 50%;
+    width: 100%; 
+    height: 220%;
+  }
+  .gift-flower{
+    width: 90%; 
+    height: 90%;
+    z-index: -1;
+  }
+  .footer-rounded{
+    width: 150px; 
+    height: 100px;
+  }
+  .footer-left-flower{
+    width: 100%; 
+    height: 100%;
+  }
+  .footer-right-flower{
+    width: 100%; 
+    height: 100%;
+  }
+  .insta-rounded{
+    width: 25%; 
+    height: 100%;
+  }
+}
