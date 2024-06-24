@@ -11,10 +11,12 @@ import ThanksPage from './pages/ThanksPage';
 import Prewedding from './pages/Prewedding';
 import Footer from './pages/Footer';
 import Date from './pages/Date';
+import BackgroundMusic from './assets/BackgroundMusic BackgroundMusic';
 
 function App() {
   return (
     <div>
+      <BackgroundMusic/>
       <Cover/>
       <Date/>
       <Countdown/>
