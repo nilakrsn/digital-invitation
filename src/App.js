@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import PopUp from './pages/PopUp';
 import Cover from './pages/Cover';
 import Countdown from './pages/Countdown';
 import EventPage from './pages/EventPage';
@@ -11,13 +10,13 @@ import Gift from './pages/Gift';
 import ThanksPage from './pages/ThanksPage';
 import Prewedding from './pages/Prewedding';
 import Footer from './pages/Footer';
-import UploadImage from './assets/UploadImage';
+import Date from './pages/Date';
 
 function App() {
   return (
     <div>
-      <PopUp/>
       <Cover/>
+      <Date/>
       <Countdown/>
       <EventPage/>
       <DetailEvent/>

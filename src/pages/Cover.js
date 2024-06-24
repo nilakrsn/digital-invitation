@@ -1,37 +1,80 @@
+import { useEffect, useState } from "react";
 import "../App.css";
+import PopUp from "./PopUp";
+import UseScrollVisible from "./trasitions/UseScrollVisible";
 
 function Cover() {
-    return (
-        <div className="relative flex flex-col items-center md:min-h-screen md:mt-9">
-            <div className="right-flower"></div>
-            <div className="img-rounded">
-                <img src="https://res.cloudinary.com/dpcgiupja/image/upload/v1719150856/invaite/assets_3.png" alt="" className="crop-img-rounded" />
-            </div>
-            <div className=" mt-2 md:mt-5 text-center">
-                <div className="text-md md:text-xl tracking-widest text-gray-600 georgia">
-                    JATINANGOR NATIONAL GOLF
-                </div>
-                <div className="mt-5 md:mt-8">
-                    <div className="text-sm md:text-xl tracking-widest text-gray-600 georgia">
-                        #sharERmomentwithLAN
-                    </div>
-                    <div className="flex flex-row justify-center items-center gap-6 mt-2">
-                        <div className="text-3xl md:text-5xl tracking-wide butler-regular">
-                            02
-                        </div>
-                        <div className="w-0.5 h-9 bg-gray-300 inline-block"></div>
-                        <div className="text-3xl md:text-5xl tracking-wide butler-regular">
-                            06
-                        </div>
-                        <div className="w-0.5 h-9 bg-gray-300 inline-block"></div>
-                        <div className="text-3xl md:text-5xl tracking-wide butler-regular">
-                            24
-                        </div>
-                    </div>
-                </div>
-            </div>
+  const [buttonPopup, setButtonPopup] = useState(false);
+
+  useEffect(() => {
+    setButtonPopup(true);
+  }, []);
+
+  const elementId = "cover-section";
+  const isVisible = UseScrollVisible(elementId);
+
+  return (
+    <div
+      id={elementId}
+      className="relative flex flex-col items-center justify-end min-h-screen"
+    >
+      <div
+        className={`text-center ${
+          isVisible ? "slide-in-cover active" : "slide-in-cover"
+        }`}
+      >
+        <div className="text-base md:text-xl tracking-widest text-gray-600 georgia">
+          THE WEDDING OF
         </div>
-    );
+        <div
+          className=" text-6xl md:text-8xl tracking-wide butler mt-5"
+          style={{ letterSpacing: 1 }}
+        >
+          ERICK
+        </div>
+        <div className="text-4xl md:text-6xl snellRoundHand tracking-wider">
+          and
+        </div>
+        <div
+          className="text-6xl md:text-8xl tracking-wide butler"
+          style={{ letterSpacing: -1 }}
+        >
+          WULAN
+        </div>
+        <div className="mt-10 md:mt-14">
+          <div
+            className="text-base md:text-xl tracking-widest text-gray-600 georgia"
+            style={{ letterSpacing: -0.1 }}
+          >
+            INVITATION TO FOLLOW
+          </div>
+          <div className="flex items-baseline justify-center">
+            <div className="text-2xl md:text-3xl snellRoundHand tracking-wider text-gray-600">
+              dear,
+            </div>
+            <hr className="ml-1 w-1/6 border-gray-600" />
+          </div>
+          <button
+            onClick={() => setButtonPopup(true)}
+            className="relative flex justify-center mt-1"
+          >
+            <div className="crop">
+              <img
+                src="https://res.cloudinary.com/dpcgiupja/image/upload/v1719150851/invaite/button_2.png"
+                alt=""
+                className="crop-img"
+              />
+            </div>
+            <div className="absolute top-0 left-7 right-0 md:bottom-3 bottom-2 flex items-center justify-center text-base md:text-xl butler text-[#F9EFE3]">
+              OPEN INVITATION
+            </div>
+          </button>
+        </div>
+      </div>
+      <div className="left-flower" />
+      <PopUp trigger={buttonPopup} setTrigger={setButtonPopup} />
+    </div>
+  );
 }
 
 export default Cover;

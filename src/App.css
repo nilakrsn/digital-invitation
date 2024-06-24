@@ -90,11 +90,17 @@
   object-fit: cover; 
 }
 
-
 .crop-maps {
   margin: 0;
   width: 600px; 
   height: 80px; 
+  overflow: hidden; 
+}
+.crop-rsvp {
+  margin: 0;
+  padding: 0;
+  width: 500px; 
+  height: 90px; 
   overflow: hidden; 
 }
 
@@ -123,6 +129,7 @@
   z-index: -1;
   background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150848/invaite/assets_2.png');
 }
+
 .left-flower {
   position: absolute;
   top: 73%;
@@ -134,6 +141,7 @@
   z-index: -1;
   background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150876/invaite/assets_1.png'); 
 }
+
 .bottom-right-flower {
   position: absolute;
   top: 55%;
@@ -158,9 +166,6 @@
   background-image: url('https://res.cloudinary.com/dpcgiupja/image/upload/v1719150867/invaite/assets_4.png'); 
 }
 
-
-
-
 .center-bg {
   position: absolute;
   top: 95%;
@@ -181,8 +186,8 @@
 
 .maps-rounded {
   margin: 0;
-  width: 30%; 
-  height: 30%; 
+  width: 500px; 
+  height: 300px; 
   overflow: hidden; 
 }
 
@@ -313,8 +318,8 @@
 
 .insta-rounded {
   margin: 0;
-  width: 160px; 
-  height: px; 
+  width: 165px; 
+  height: 40px; 
   overflow: hidden; 
 }
 
@@ -324,6 +329,159 @@
   height: 100%; 
   object-fit: cover; 
 }
+
+.popup-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+  opacity: 0; 
+  animation: fadeIn 0.3s forwards; 
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+  position: relative;
+  max-width: 90%;
+  width: 600px;
+  transform: translateY(-50px); 
+  animation: slideIn 0.3s forwards; 
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+
+.popup-container.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+.popup-content.fade-out {
+  animation: slideOut 0.3s forwards;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50px); 
+  transition: opacity 5s ease, transform 5s ease;
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+.slide-out {
+  opacity: 0;
+  transform: translateX(50px); 
+  transition: opacity 5s ease, transform 5s ease;
+}
+
+.slide-out.active {
+  opacity: 1;
+  transform: translateX(0); 
+}
+.slide-in-cover {
+  opacity: 0;
+  transform: translateX(-50px); 
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-in-cover.active {
+  opacity: 1;
+  transform: translateX(0); 
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 5s ease, transform 5s ease;
+}
+
+.slide-up.active {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.slide-up-cover {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.slide-up-cover.active {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(-50px); 
+  transition: opacity 12s ease, transform 12s ease;
+}
+
+.slide-down.active {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+.slide-down-cover {
+  opacity: 0;
+  transform: translateY(-50px); 
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+.slide-down-cover.active {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
 
 @media (max-width: 768px) {
   .crop {
@@ -381,8 +539,9 @@
     z-index: -1;
   }
   .maps-rounded{
-    width: 55%; 
-    height: 40%;
+    width: 65%; 
+    height: 250px;
+  
   }
   .maps-left-flower{
     top: 40%;
@@ -421,5 +580,8 @@
   .insta-rounded{
     width: 25%; 
     height: 100%;
+  }
+  .gift-flower {
+    display: none;
   }
 }
