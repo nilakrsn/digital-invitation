@@ -8,6 +8,7 @@ const BackgroundMusic = () => {
       audioRef.current.play().catch((error) => {
         console.error('Autoplay failed:', error);
       });
+    
       removeEventListeners();
     };
 
