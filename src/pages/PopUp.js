@@ -22,7 +22,7 @@ function PopUp({ trigger, setTrigger }) {
         <button className="close-button" onClick={handleClose}>
           &times;
         </button>
-        <div className="relative flex flex-col items-center justify-end min-h-screen">
+        <div className="relative flex flex-col items-center justify-end p-7">
           <div className="text-center">
             <div className="text-base md:text-xl tracking-widest text-gray-600 georgia">
               THE WEDDING OF
@@ -72,7 +72,6 @@ function PopUp({ trigger, setTrigger }) {
               </div>
             </div>
           </div>
-          <div className="left-flower" />
         </div>
       </div>
     </div>

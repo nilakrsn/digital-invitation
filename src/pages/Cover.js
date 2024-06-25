@@ -10,6 +10,17 @@ function Cover() {
     setButtonPopup(true);
   }, []);
 
+  useEffect(() => {
+    if (buttonPopup) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [buttonPopup]);
+
   const elementId = "cover-section";
   const isVisible = UseScrollVisible(elementId);
 
